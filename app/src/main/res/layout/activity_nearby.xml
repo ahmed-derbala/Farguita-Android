@@ -1,0 +1,80 @@
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/TF_location"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/B_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/TF_location"
+        android:onClick="onClick"
+        android:text="Search" />
+
+    <tn.esprit.farguita.NearBy.MapWrapperLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/B_restaurants"
+        tools:context="tn.esprit.farguita.NearBy.NearByActivity" >
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".tn.esprit.farguita.NearBy.NearByActivity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+         />
+    </tn.esprit.farguita.NearBy.MapWrapperLayout>
+
+
+    <Button
+        android:id="@+id/B_cafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/TF_location"
+        android:onClick="onClick"
+        android:text="Cafe" />
+
+
+
+    <Button
+        android:id="@+id/B_restaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TF_location"
+        android:layout_toEndOf="@+id/B_cafe"
+        android:onClick="onClick"
+        android:text="Restaurants" />
+
+    <Button
+        android:id="@+id/B_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/B_restaurants"
+        android:layout_toEndOf="@+id/B_restaurants"
+        android:onClick="onClick"
+        android:text="To" />
+
+
+</RelativeLayout>

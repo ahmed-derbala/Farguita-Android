@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.engineer4u.yummy.AboutUs"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/yummy_app_bar"
+        layout="@layout/yummy_app_bar" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity"
+        >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Farguita"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/cardlayout"
+            android:typeface="serif"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="
+A fine dining restaurant chain, operating
+from multiple locations in various cities,
+wanted its customers to locate the nearest restaurant quickly and also see the current
+waiting time in those restaurant.
+As an option, a customer could also book
+a table from the phone only.\n
+Therefore, we planned to develop a
+restaurant locator and booking application, “Farguita”. Just relax and enjoy this experience. More to come soon "
+            android:background="@drawable/cardlayout"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Built by Ahmed Derbala\n Version: 1.0 beta"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

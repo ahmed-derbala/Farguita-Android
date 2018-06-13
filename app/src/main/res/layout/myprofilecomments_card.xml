@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="6dp"
+    card_view:contentPadding="7dp"
+    android:padding="10dp"
+    android:layout_margin="7dp"
+    card_view:cardBackgroundColor="#009688">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/fav_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    <TableLayout
+        android:id="@+id/t"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <TableRow>
+
+
+            <TextView
+                android:id="@+id/placeTitle_favcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="ID Show Here"
+                android:textColor="#ffff"
+                />
+        </TableRow>
+
+        <TableRow>
+
+
+
+            <TextView
+                android:id="@+id/address_favcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Name Show Here"
+                android:textColor="#ffff"/>
+        </TableRow>
+
+        <TableRow>
+
+
+
+            <TextView
+                android:id="@+id/telephone_favcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Phone Number Show"
+                android:textColor="#ffff"
+                />
+        </TableRow>
+
+        <TableRow>
+
+
+
+            <TextView
+                android:id="@+id/placeType_favcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Subject Show Here"
+                android:textColor="#ffff"
+                />
+
+        </TableRow>
+
+
+
+        <TableRow>
+            <EditText
+                android:id="@+id/comment_favcard"
+                android:hint="comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:onClick="saveRatingFavCard"
+                android:id="@+id/saveRating_favcard"
+                android:text="Save Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

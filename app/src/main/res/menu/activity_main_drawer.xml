@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_session"
+            android:icon="@drawable/ic_session"
+            android:title="Session" />
+        <item
+            android:id="@+id/nav_nearby"
+            android:icon="@drawable/ic_nearby"
+            android:title="NearBy" />
+        <item
+            android:id="@+id/nav_favoris"
+            android:icon="@drawable/ic_favoris"
+            android:title="Yummy" />
+        <item
+            android:id="@+id/nav_letseat"
+            android:icon="@drawable/ic_letseat"
+            android:title="Lets Eat !" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="PROMO" />
+        </menu>
+    </item>
+
+</menu>
