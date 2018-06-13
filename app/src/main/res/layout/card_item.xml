@@ -105,6 +105,39 @@
                 android:layout_height="wrap_content" />
         </TableRow>
         <TableRow>
+            <LinearLayout
+                android:id="@+id/upvoteDownvoteLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/reviewTextView"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <ImageView
+                    android:id="@+id/thumbsUpImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/thumbs_up"
+                    android:contentDescription="@string/thumbs_up_description"/>
+
+                <TextView
+                    android:id="@+id/voteTotalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="20sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="10dp"/>
+
+                <ImageView
+                    android:id="@+id/thumbsDownImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/thumbs_down"
+                    android:contentDescription="@string/thumbs_down_description"/>
+
+
+            </LinearLayout>
             <Button
                 android:onClick="saveRatingFavCard"
                 android:id="@+id/saveRating_favcard"

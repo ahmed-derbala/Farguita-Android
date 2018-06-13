@@ -15,7 +15,8 @@
     <string name="welcome">Welcome</string>
     <string name="btn_logout">LOGOUT</string>
     <string name="name">Fullname</string>
-
+    <string name="thumbs_down_description">Thumbs Down</string>
+    <string name="thumbs_up_description">Thumbs Up</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

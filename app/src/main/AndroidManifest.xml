@@ -31,7 +31,7 @@
         </activity>
         <activity
             android:name=".Splash.Splash"
-            android:label="I-Search">
+            android:label="Farguita">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
