@@ -20,6 +20,10 @@
             android:id="@+id/nav_letseat"
             android:icon="@drawable/ic_letseat"
             android:title="Lets Eat !" />
+        <item
+            android:id="@+id/tip_calculator"
+            android:icon="@drawable/ic_letseat"
+            android:title="Tip Calculator" />
     </group>
 
     <item android:title="Communicate">

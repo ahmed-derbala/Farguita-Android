@@ -1,0 +1,240 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    tools:context="assigment.dawson.restocoderenation.TipFragment">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="@string/bill"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView"
+            android:gravity="center_vertical"
+            android:layout_weight="1" />
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/billInput"
+            android:layout_weight="1"
+            android:hint="Bill Amount"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/numberPer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:id="@+id/numberText"
+                android:layout_weight="1" />
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/persInput"
+                android:layout_weight="1"
+                android:text="1"/>
+
+        </LinearLayout>
+
+
+      <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <TextView
+            android:text="@string/tips"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/tips"
+            android:layout_weight="1" />
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/tipsInput"
+            android:layout_weight="1"
+            android:text="0"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+
+        <TextView
+            android:text="@string/radioTops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioHead"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:text="10%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton10"
+                android:layout_weight="1"
+                />
+
+            <RadioButton
+                android:text="15%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton15"
+                android:layout_weight="1"
+                />
+
+            <RadioButton
+                android:text="20%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton20"
+                android:layout_weight="1"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+        <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="@string/tipsTotal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tipsTotal"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:id="@+id/tipsOutput"
+            android:layout_weight="1"
+            android:gravity="center_vertical"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="@string/billTotal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/billTotal"
+            android:layout_weight="1"
+            android:gravity="center_vertical"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:id="@+id/totalOutput"
+            android:layout_weight="1"
+            android:gravity="center_vertical"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="@string/billPerPerson"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/billPerCap"
+            android:layout_weight="1"
+            android:gravity="center_vertical"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:id="@+id/ouputPerCap"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/calculateButton"
+            android:src="@drawable/calculate_button"
+            android:scaleType="fitCenter"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</LinearLayout>

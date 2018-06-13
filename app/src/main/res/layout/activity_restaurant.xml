@@ -1,41 +1,225 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laioffer.laiofferproject.BackendListFragment">
+    tools:context="in.engineer4u.yummy.DetailView"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    >
 
-    <LinearLayout
-        android:id="@+id/backend_linearlayout"
-        android:orientation="vertical"
+    <include
+        android:id="@+id/yummy_app_bar"
+        layout="@layout/yummy_app_bar" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="175dp"
+        android:layout_marginBottom="-7dp"
+        android:orientation="vertical" >
+
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:id="@+id/icon"
+            android:src="@drawable/restaurant_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:scaleType="centerInside"
+            />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="vertical"
-            android:paddingLeft="150dp"
-            android:background="@drawable/restuarantimg">
-
-            <TextView
-                android:layout_marginTop="50dp"
-                android:text="Item"
-                android:textColor="#FBAF41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:text="Recommendation"
-                android:textColor="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <ListView android:id="@+id/backend_list"
-            android:background="#F2EBD9"
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent">
-        </ListView>
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="#75000000"
+            android:orientation="vertical"
+            android:paddingBottom="14dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/restaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:singleLine="true"
+                android:text="Name of Restaurant"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:visibility="visible"
+                android:textColor="#ffffff"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#5033ff33"
+                android:layout_margin="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:scaleType="fitCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:src="@drawable/away_place" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="1dp"
+                    android:singleLine="true"
+                    android:text="25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="visible"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:singleLine="true"
+                    android:text="KM Away"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="visible"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/address_res"
+            />
+        <TextView
+            android:id="@+id/detail_res_address"
+            android:layout_width="0.0px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:layout_weight="1.0"
+            android:maxLines="2"
+            android:paddingRight="6.0dip"
+            android:text="11111111 RD, 2222222222"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp"
+            android:gravity="center_vertical"
+            />
     </LinearLayout>
 
-</FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/location"
+            />
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="0.0px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:layout_weight="1.0"
+            android:maxLines="2"
+            android:paddingRight="6.0dip"
+            android:text="11111111 RD, 2222222222"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp"
+            android:gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rating"
+            />
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="0.0px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:layout_weight="1.0"
+            android:maxLines="2"
+            android:paddingRight="6.0dip"
+            android:text="11111111 RD, 2222222222"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp"
+            android:gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/call"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_vertical"
+            android:text="Call" />
+
+        <Button
+            android:id="@+id/website"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_vertical"
+            android:text="Website" />
+
+        <Button
+            android:id="@+id/more"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_vertical"
+            android:text="More Details" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

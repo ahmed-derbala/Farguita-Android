@@ -1,5 +1,8 @@
 package tn.esprit.farguita.Main;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -51,6 +54,8 @@ import tn.esprit.farguita.Profile.ProfileActivity;
 import tn.esprit.farguita.Promotion.PromotionFragment;
 import tn.esprit.farguita.R;
 import tn.esprit.farguita.TimeLine.TimeLineFragment;
+import tn.esprit.farguita.TipCalculator.SerializableFragment;
+import tn.esprit.farguita.TipCalculator.TipFragment;
 import tn.esprit.farguita.Utils.CurrentUser;
 import tn.esprit.farguita.app.AppConfig;
 import tn.esprit.farguita.helper.SQLiteHandler;
@@ -63,6 +68,8 @@ public class MainActivity extends AppCompatActivity
 
     private TextView nameTV,emailTV;
     private ImageView profilePhotoIV;
+    private SerializableFragment currentFragment;
+
 
 
 
@@ -70,6 +77,12 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //tip calc frag
+        if(savedInstanceState!=null&&savedInstanceState.getSerializable("currentFragment")!=null) {
+            this.currentFragment = (SerializableFragment) savedInstanceState.getSerializable("currentFragment");
+        }
+        //otherwise we assign the default value to the currentFrsgment
 
         setTitle("weather");
 
@@ -202,6 +215,15 @@ public class MainActivity extends AppCompatActivity
 
 
 
+        } else if (id == R.id.tip_calculator) {
+
+            setTitle("promo");
+            BlankFragment profileFragment = new BlankFragment();
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.mainFrameContent,profileFragment).commit();
+            currentFragment = new TipFragment();
+            showFragment(currentFragment);
+
         } else if (id == R.id.nav_share) {
             startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
 
@@ -239,5 +261,17 @@ public class MainActivity extends AppCompatActivity
     public void saveRatingFavCard(View view) {
     }
 
+    private void showFragment(Fragment frag) {
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        if (this.findViewById(R.id.mainFrameContent)!=null) {
+            ft.replace( R.id.mainFrameContent, frag);
+        }
+        else {
+            ft.replace( R.id.mainFrameContent, frag);
+        }
+        ft.commit();
+    }
 
 }
