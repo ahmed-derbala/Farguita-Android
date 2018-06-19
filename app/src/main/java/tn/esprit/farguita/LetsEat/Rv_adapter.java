@@ -135,6 +135,16 @@ public class Rv_adapter extends RecyclerView.Adapter<Rv_adapter.MyViewHolder> {
                     //sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                     sendIntent.putExtra("restaurantName", holder.res_name.getText());
+                    sendIntent.putExtra("distance", holder.res_distance.getText());
+                    sendIntent.putExtra("phone", holder.res_phone.getText());
+                    Log.d("phone",holder.res_phone.getText().toString());
+                    sendIntent.putExtra("address", holder.res_address.getText());
+                    sendIntent.putExtra("photo", storeModels.get(holder.getAdapterPosition() - 1).photourl.toString());
+
+
+
+
+
                     context.startActivity(sendIntent);
 
 

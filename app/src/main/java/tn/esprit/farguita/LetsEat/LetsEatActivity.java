@@ -205,6 +205,7 @@ public class LetsEatActivity extends AppCompatActivity implements GoogleApiClien
 
                                     photourl = ApiClient.base_url + "place/photo?maxwidth=100&photoreference=" + photo_reference +
                                             "&key=" + ApiClient.GOOGLE_PLACE_API_KEY;
+                                    Log.d("PHOTOO",photourl.toString());
 
                                 } else {
                                     photourl = "NA";

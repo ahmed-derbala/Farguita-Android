@@ -77,11 +77,14 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        WeatherFragment profileFragment = new WeatherFragment();
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.mainFrameContent,profileFragment).commit();
 
         //tip calc frag
-        if(savedInstanceState!=null&&savedInstanceState.getSerializable("currentFragment")!=null) {
+       /* if(savedInstanceState!=null&&savedInstanceState.getSerializable("currentFragment")!=null) {
             this.currentFragment = (SerializableFragment) savedInstanceState.getSerializable("currentFragment");
-        }
+        }*/
         //otherwise we assign the default value to the currentFrsgment
 
         setTitle("weather");
@@ -148,9 +151,7 @@ public class MainActivity extends AppCompatActivity
         {
             Picasso.with(getApplicationContext()).load(AppConfig.URL_SERVER+"FarguitaServer/ProfilePhotos/"+uid+".png").into(profilePhotoIV);
         }
-        WeatherFragment profileFragment = new WeatherFragment();
-        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.mainFrameContent,profileFragment).commit();
+
 
 
     }
@@ -202,7 +203,7 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_favoris) {
-             setTitle("yummy");
+            setTitle("yummy");
             FavorisFragment profileFragment = new FavorisFragment();
             android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.mainFrameContent,profileFragment).commit();
@@ -217,7 +218,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.tip_calculator) {
 
-            setTitle("promo");
+            setTitle("Tip Calculator");
             BlankFragment profileFragment = new BlankFragment();
             android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.mainFrameContent,profileFragment).commit();

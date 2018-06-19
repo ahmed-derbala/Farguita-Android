@@ -4,7 +4,7 @@ public class AppConfig {
 	//APIKEY
 	public static String API_KEY = "AIzaSyCaQhS9AM_Uj-UMwQMA8Ec7fEoT-BbrnaA";
 	// Server url
-	public static String URL_SERVER = "http://192.168.1.3/";
+	public static String URL_SERVER = "http://192.168.43.17/";
 
 	// Server user login url
 	public static String URL_LOGIN = URL_SERVER+"FarguitaServer/login.php";
