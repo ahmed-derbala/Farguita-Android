@@ -30,7 +30,7 @@ public class RestaurantActivity extends AppCompatActivity {
 
         restaurantName = findViewById(R.id.restaurantName);
         restaurantDistance = findViewById(R.id.distance);
-        restaurantPhone = findViewById(R.id.location);
+       // restaurantPhone = findViewById(R.id.location);
         restaurantAddress = findViewById(R.id.detail_res_address);
         restaurantImage = findViewById(R.id.icon);
 
@@ -47,7 +47,7 @@ public class RestaurantActivity extends AppCompatActivity {
     public void Callrestaurant(View view) {
         // Use format with "tel:" and phone number to create phoneNumber.
         String phoneNumber = String.format("tel: %s",
-                restaurantPhone.getText().toString());
+                getIntent().getStringExtra("phone"));
         // Create the intent.
         Intent dialIntent = new Intent(Intent.ACTION_DIAL);
         // Set the data for the intent as the phone number.

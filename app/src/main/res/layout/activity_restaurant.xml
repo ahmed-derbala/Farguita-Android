@@ -1,226 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="in.engineer4u.yummy.DetailView"
-    android:background="#ffffff"
+    android:background="@color/paleGrey"
     android:orientation="vertical"
-    >
+    android:weightSum="1">
 
-    <include
-        android:id="@+id/yummy_app_bar"
-        layout="@layout/yummy_app_bar" />
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
-        android:layout_marginBottom="-7dp"
-        android:orientation="vertical" >
-
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/frag_rest_h_margin"
+        android:layout_marginLeft="@dimen/frag_rest_h_margin"
+        android:layout_marginRight="@dimen/frag_rest_h_margin"
+        android:layout_marginStart="@dimen/frag_rest_h_margin"
+        android:layout_marginTop="@dimen/frag_rest_medium_v_margin"
+        android:layout_weight="0.41"
+        cardview:cardCornerRadius="@dimen/frag_rest_card_view_corner_radius">
 
         <ImageView
-            android:adjustViewBounds="true"
             android:id="@+id/icon"
-            android:src="@drawable/restaurant_placeholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|center_horizontal"
-            android:scaleType="centerInside"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:background="#75000000"
-            android:orientation="vertical"
-            android:paddingBottom="14dp"
-            android:paddingTop="5dp" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|bottom">
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/name"
+                android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                android:layout_marginStart="@dimen/frag_rest_h_margin"
+                android:numStars="5" />
 
             <TextView
                 android:id="@+id/restaurantName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:singleLine="true"
-                android:text="Name of Restaurant"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:visibility="visible"
-                android:textColor="#ffffff"/>
+                android:layout_above="@+id/type"
+                android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                android:layout_marginStart="@dimen/frag_rest_h_margin"
+                android:maxLines="1"
+                android:shadowColor="@color/charcoalGrey"
+                android:shadowRadius="2"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:textStyle="bold" />
 
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="2dip"
-                android:background="#5033ff33"
-                android:layout_margin="5dp"/>
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:orientation="horizontal">
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/frag_rest_small_v_margin"
+                android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                android:layout_marginStart="@dimen/frag_rest_h_margin"
+                android:maxLines="1"
+                android:shadowColor="@color/charcoalGrey"
+                android:shadowRadius="2"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/detail_res_address"
+                android:layout_width="match_parent"
+                android:layout_below="@id/distance"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/frag_rest_small_v_margin"
+                android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                android:layout_marginStart="@dimen/frag_rest_h_margin"
+                android:maxLines="1"
+                android:shadowColor="@color/charcoalGrey"
+                android:shadowRadius="2"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
-                <ImageView
-                    android:scaleType="fitCenter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:src="@drawable/away_place" />
-
-                <TextView
-                    android:id="@+id/distance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="1dp"
-                    android:singleLine="true"
-                    android:text="25"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:visibility="visible"
-                    android:textColor="#ffffff"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="15dp"
-                    android:singleLine="true"
-                    android:text="KM Away"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:visibility="visible"
-                    android:textColor="#ffffff"/>
-            </LinearLayout>
-        </LinearLayout>
-    </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
     <LinearLayout
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/frag_rest_h_margin"
+        android:layout_marginLeft="@dimen/frag_rest_h_margin"
+        android:layout_marginRight="@dimen/frag_rest_h_margin"
+        android:layout_marginStart="@dimen/frag_rest_h_margin"
+        android:layout_marginTop="@dimen/frag_rest_large_v_margin"
+        android:layout_weight="0.09"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/address_res"
-            />
-        <TextView
-            android:id="@+id/detail_res_address"
-            android:layout_width="0.0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6.0dip"
-            android:layout_weight="1.0"
-            android:maxLines="2"
-            android:paddingRight="6.0dip"
-            android:text="11111111 RD, 2222222222"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#ff000000"
-            android:textSize="16.0sp"
-            android:gravity="center_vertical"
-            />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/location"
-            />
-        <TextView
-            android:id="@+id/location"
-            android:layout_width="0.0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6.0dip"
-            android:layout_weight="1.0"
-            android:maxLines="2"
-            android:paddingRight="6.0dip"
-            android:text="11111111 RD, 2222222222"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#ff000000"
-            android:textSize="16.0sp"
-            android:gravity="center_vertical"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rating"
-            />
-        <TextView
-            android:id="@+id/rating"
-            android:layout_width="0.0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6.0dip"
-            android:layout_weight="1.0"
-            android:maxLines="2"
-            android:paddingRight="6.0dip"
-            android:text="11111111 RD, 2222222222"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#ff000000"
-            android:textSize="16.0sp"
-            android:gravity="center_vertical"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:orientation="horizontal" >
+        android:weightSum="1">
 
         <Button
-            android:id="@+id/call"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_vertical"
+            android:id="@+id/location_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.48"
+            android:background="@drawable/button_selector"
             android:text="Call"
-            android:onClick="Callrestaurant"/>
+            android:textAllCaps="true"
+            android:onClick="Callrestaurant"
+            android:textColor="@drawable/button_text_selector" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.04" />
 
         <Button
-            android:id="@+id/website"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_vertical"
-            android:text="Website" />
-
-        <Button
-            android:id="@+id/more"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_vertical"
-            android:text="More Details" />
-
+            android:id="@+id/menu_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.48"
+            android:background="@drawable/button_selector"
+            android:text="menu"
+            android:textAllCaps="true"
+            android:textColor="@drawable/button_text_selector" />
     </LinearLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/frag_rest_h_margin"
+        android:layout_marginLeft="@dimen/frag_rest_h_margin"
+        android:layout_marginRight="@dimen/frag_rest_h_margin"
+        android:layout_marginStart="@dimen/frag_rest_h_margin"
+        android:layout_marginTop="@dimen/frag_rest_large_v_margin"
+        android:layout_marginBottom="@dimen/frag_rest_large_v_margin"
+        android:layout_weight="0.5">
+
+        <RelativeLayout
+            android:id="@+id/location_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/map_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/frag_rest_map_card_view_height"
+                android:layout_centerHorizontal="true"
+                cardview:cardCornerRadius="5dp">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/map_card_view"
+                android:layout_marginTop="@dimen/frag_rest_small_v_margin"
+                android:maxLines="2"
+                android:textColor="@color/charcoalGrey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/open_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:text="07:00-19:00"
+                android:textColor="@color/charcoalGrey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/open_closed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                android:layout_marginStart="@dimen/frag_rest_h_margin"
+                android:layout_toEndOf="@+id/open_time"
+                android:layout_toRightOf="@+id/open_time"
+                android:textAllCaps="true"
+                android:textColor="@color/charcoalGrey"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/menu_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
 
 
 
 
+        </FrameLayout>
+    </FrameLayout>
 </LinearLayout>
